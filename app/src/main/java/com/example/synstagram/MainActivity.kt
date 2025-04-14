@@ -5,12 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.synstagram.ui.components.post.PostInfoRow
+import com.example.synstagram.ui.components.post.PostItem
 import com.example.synstagram.ui.theme.SynstagramTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,9 +19,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SynstagramTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {
-                    paddingValues ->
-                    PostInfoRow(modifier = Modifier.padding(paddingValues))
+                Scaffold(modifier = Modifier.fillMaxSize()) { paddingValues ->
+                    PostItem()
                 }
             }
         }
@@ -33,6 +32,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     SynstagramTheme {
-        PostInfoRow()
+        PostItem()
     }
 }
