@@ -1,4 +1,4 @@
-package com.example.synstagram.ui.components
+package com.example.synstagram.ui.components.basics
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
